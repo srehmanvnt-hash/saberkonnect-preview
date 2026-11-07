@@ -22,12 +22,23 @@
   a{ text-decoration:none; color:inherit; }
   section{ padding:4.5rem 0; }
 
-  /* HEADER & LOGO */
+  /* HEADER & LOGO LOCKUP */
   header{ background:var(--white); position:sticky; top:0; z-index:50; border-bottom:1px solid #e6ded2; }
   .nav{ display:flex; align-items:center; justify-content:space-between; padding:1rem 0; flex-wrap:wrap; gap:1rem; }
   
-  .logo { display: flex; align-items: center; }
+  /* The Logo Lockup */
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
   .logo img { height: 50px; width: auto; display: block; }
+  .logo-text { 
+    font-size: 1.6rem; 
+    font-weight: 800; 
+    color: var(--teal-dark); 
+    letter-spacing: -0.5px; 
+    line-height: 1; 
+    display: flex; 
+    align-items: center;
+  }
+  .logo-text span { color: var(--gold); }
 
   .nav ul{ display:flex; list-style:none; gap:1.8rem; flex-wrap:wrap; font-weight:500; font-size:.98rem; }
   .nav ul a:hover{ color:var(--teal); }
@@ -106,7 +117,9 @@
   /* RESPONSIVE MOBILE OPTIMIZATION */
   @media (max-width:820px){
     .nav { flex-direction: column; gap: 1rem; }
-    .logo img { height: 45px; }
+    .logo img { height: 40px; }
+    .logo-text { font-size: 1.3rem; }
+    
     .nav ul { justify-content: center; gap: 1rem; font-size: .9rem; }
     .nav-cta { width: 100%; text-align: center; padding: .8rem; }
     
@@ -126,9 +139,10 @@
 <header>
   <div class="container nav">
     
-    <!-- YOUR LOGO IS HERE -->
+    <!-- LOGO + COMPANY NAME LOCKUP -->
     <a href="index.html" class="logo">
       <img src="logo.png" alt="Saber Konnect Logo">
+      <div class="logo-text">Saber<span>Konnect</span></div>
     </a>
 
     <ul>
